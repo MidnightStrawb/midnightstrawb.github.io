@@ -1,0 +1,96 @@
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top, #2a0038, #0a0a0a);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ===== HERO CARD ===== */
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.card {
+    text-align: center;
+    max-width: 500px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 40px rgba(120, 0, 255, 0.2);
+}
+
+/* ===== PROFILE IMAGE ===== */
+.pfp {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 2px solid #a45bff;
+    box-shadow: 0 0 20px rgba(164, 91, 255, 0.4);
+    margin-bottom: 20px;
+}
+
+/* ===== TEXT ===== */
+h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.8;
+    margin: 4px 0;
+}
+
+/* ===== BUTTONS ===== */
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid #a45bff;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #a45bff;
+    box-shadow: 0 0 15px #a45bff;
+}
+
+/* ===== SOCIALS ===== */
+.socials {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon {
+    color: white;
+    opacity: 0.7;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.icon:hover {
+    opacity: 1;
+    color: #a45bff;
+}
