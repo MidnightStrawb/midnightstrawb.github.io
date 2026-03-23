@@ -89,6 +89,9 @@ h1 {
     font-size: 48px;
     letter-spacing: 2px;
     margin-bottom: 15px;
+    background: linear-gradient(90deg, #a45bff, #00ffd0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h2 {
