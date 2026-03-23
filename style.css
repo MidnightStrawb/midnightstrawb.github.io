@@ -7,10 +7,33 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-/* ===== HERO CARD ===== */
+/* Animated background drift */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(164, 91, 255, 0.05) 0px,
+        rgba(164, 91, 255, 0.05) 2px,
+        transparent 2px,
+        transparent 6px
+    );
+    animation: drift 18s linear infinite;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+@keyframes drift {
+    from { transform: translate(0,0); }
+    to { transform: translate(-200px, -200px); }
+}
+
+/* ===== HERO WRAPPER ===== */
 .hero {
     width: 100%;
     display: flex;
@@ -18,15 +41,31 @@ body {
     padding: 40px;
 }
 
+/* ===== CARD ===== */
 .card {
     text-align: center;
-    max-width: 650px; /* BIGGER CARD */
-    padding: 60px; /* MORE SPACE */
+    max-width: 650px;
+    padding: 60px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 25px;
     backdrop-filter: blur(14px);
-    box-shadow: 0 0 60px rgba(120, 0, 255, 0.25);
+    box-shadow: 0 0 40px rgba(120, 0, 255, 0.18);
+
+    /* Fade-in + hover motion */
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 80px rgba(164, 91, 255, 0.45);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== PROFILE IMAGE ===== */
@@ -37,6 +76,12 @@ body {
     border: 2px solid #a45bff;
     box-shadow: 0 0 25px rgba(164, 91, 255, 0.5);
     margin-bottom: 25px;
+    transition: 0.3s ease;
+}
+
+.pfp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(164, 91, 255, 0.6);
 }
 
 /* ===== TEXT ===== */
@@ -67,12 +112,13 @@ h2 {
     border: 1px solid #a45bff;
     color: white;
     text-decoration: none;
-    transition: 0.25s;
+    transition: 0.25s ease;
 }
 
 .btn:hover {
     background: #a45bff;
     box-shadow: 0 0 20px #a45bff;
+    transform: translateY(-3px);
 }
 
 /* ===== SOCIAL ICONS ===== */
@@ -84,16 +130,31 @@ h2 {
 }
 
 .icon img {
-    width: 28px;        
-    height: 28px;         
-    object-fit: contain;  
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
     opacity: 0.75;
     transition: 0.25s ease;
-    display: block;      
 }
-
 
 .icon img:hover {
     opacity: 1;
-    filter: drop-shadow(0 0 10px #a45bff);
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 12px #a45bff);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 500px) {
+    .card {
+        padding: 40px 25px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .pfp {
+        width: 130px;
+        height: 130px;
+    }
 }
