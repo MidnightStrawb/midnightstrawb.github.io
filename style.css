@@ -120,8 +120,7 @@ h2 {
 .btn {
     padding: 14px 22px;
     border-radius: 30px;
-    border: 1px solid transparent;
-    background: linear-gradient(90deg, #a45bff, #00ffd0);
+    border: 1px solid #a45bff;
     color: black;
     font-weight: 600;
     text-decoration: none;
