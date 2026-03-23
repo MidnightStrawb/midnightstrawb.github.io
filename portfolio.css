@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: radial-gradient(circle at top, #2a0038, #0a0a0a);
+    background: #0a0a0a;
     color: white;
 }
 
@@ -24,9 +24,9 @@ body {
 }
 
 .section-title {
-    font-size: 28px;
+    font-size: 26px;
     margin: 40px 0 20px;
-    color: #a45bff;
+    color: #c084fc;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -38,65 +38,75 @@ body {
 }
 
 .box {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 25px;
-    border-radius: 18px;
-    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
     transition: 0.25s;
     text-align: left;
     position: relative;
 }
 
 .box:hover {
-    border-color: #a45bff;
-    box-shadow: 0 0 20px rgba(164, 91, 255, 0.4);
+    border-color: #c084fc;
+    box-shadow: 0 0 20px rgba(192, 132, 252, 0.3);
     transform: translateY(-4px);
 }
 
 .box h3 {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     font-size: 20px;
 }
 
-.box p {
-    opacity: 0.8;
-    font-size: 15px;
+.org {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 12px;
 }
 
-/* TAGS */
+/* TAG COLORS */
 .tag {
     position: absolute;
     top: 15px;
     right: 15px;
     padding: 4px 10px;
-    border-radius: 8px;
-    font-size: 12px;
-    font-weight: 600;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
     letter-spacing: 0.5px;
+    color: black;
+}
+
+.tag.manager {
+    background: #60a5fa; /* blue */
+}
+
+.tag.staff {
+    background: #facc15; /* yellow */
+}
+
+.tag.production {
+    background: #f87171; /* red */
 }
 
 .tag.active {
-    background: rgba(164, 91, 255, 0.25);
-    border: 1px solid #a45bff;
-    color: #d8b4ff;
+    background: #4ade80; /* green */
 }
 
 .tag.past {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #bbbbbb;
+    background: #9ca3af; /* gray */
 }
 
 .back {
     display: inline-block;
     margin-top: 50px;
-    color: #a45bff;
+    color: #c084fc;
     text-decoration: none;
     font-size: 18px;
     transition: 0.25s;
 }
 
 .back:hover {
-    text-shadow: 0 0 10px #a45bff;
+    text-shadow: 0 0 10px #c084fc;
 }
