@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top, #2a0038, #0a0a0a);
+    color: white;
+}
+
+.portfolio-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    opacity: 0.7;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    transition: 0.25s;
+}
+
+.box:hover {
+    border-color: #a45bff;
+    box-shadow: 0 0 20px rgba(164, 91, 255, 0.4);
+    transform: translateY(-4px);
+}
+
+.box h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.box p {
+    opacity: 0.8;
+    font-size: 15px;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 40px;
+    color: #a45bff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.25s;
+}
+
+.back:hover {
+    text-shadow: 0 0 10px #a45bff;
+}
