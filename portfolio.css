@@ -102,10 +102,20 @@ body {
 
 .tag.active {
     background: #4ade80; /* green */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 11px;
+    opacity: 0.7;
 }
 
 .tag.past {
     background: #9ca3af; /* gray */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 11px;
+    opacity: 0.7;
 }
 
 .back {
