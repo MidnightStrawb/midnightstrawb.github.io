@@ -84,11 +84,14 @@ h2 {
 }
 
 .icon img {
-    width: 32px;
-    height: 32px;
+    width: 28px;          /* consistent size */
+    height: 28px;         /* prevents weird scaling */
+    object-fit: contain;  /* keeps proportions clean */
     opacity: 0.75;
     transition: 0.25s ease;
+    display: block;       /* removes inline spacing issues */
 }
+
 
 .icon img:hover {
     opacity: 1;
