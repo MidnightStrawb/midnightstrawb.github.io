@@ -1,16 +1,16 @@
 // script.js
 
 // Mouse glow
-document.addEventListener("mousemove", (e) => {
-    document.body.style.setProperty('--x', e.clientX + 'px');
-    document.body.style.setProperty('--y', e.clientY + 'px');
-});
+// document.addEventListener("mousemove", (e) => {
+//    document.body.style.setProperty('--x', e.clientX + 'px');
+//    document.body.style.setProperty('--y', e.clientY + 'px');
+//});
 
 // Typing effect
 const roles = [
     "Owner - Vessel Esports",
     "Director - Ping Spike",
-    "Esports Broadcaster"
+    "Esports Producer"
 ];
 
 let i = 0;
