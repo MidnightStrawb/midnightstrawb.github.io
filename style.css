@@ -11,8 +11,8 @@ body {
     position: relative;
 }
 
-/* Mouse glow */
-body::after {
+/* Mouse glow 
+ body::after {
     content: "";
     position: fixed;
     top: var(--y);
