@@ -26,25 +26,29 @@ body {
 }
 
 /* Music btn */
-.music-toggle {
+#music-toggle {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     padding: 12px 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border: 2px solid #ed3e41; /* Vessel pink */
+    background: rgba(0, 0, 0, 0.65);
+    border: 2px solid #ed3e41; /* Vessel red/pink */
     color: white;
+    font-size: 14px;
     font-family: 'Inter', sans-serif;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    z-index: 9999; /* ensures it's clickable */
+    z-index: 9999; /* ensures it's always clickable */
+    backdrop-filter: blur(6px);
     transition: 0.25s ease;
 }
 
-.music-toggle:hover {
-    background: rgba(237, 62, 65, 0.2);
-    box-shadow: 0 0 12px #ed3e41;
+#music-toggle:hover {
+    background: rgba(237, 62, 65, 0.25);
+    box-shadow: 0 0 14px #ed3e41;
+    transform: translateY(-2px);
 }
+
 
 
 /* animated lines */
