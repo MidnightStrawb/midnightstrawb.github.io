@@ -11,9 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const audio = document.getElementById("bg-music");
   const btn = document.getElementById("music-toggle");
 
+  audio.volume = 1;
+
   btn.addEventListener("click", () => {
     if (audio.paused) {
-      audio.play();
+      audio.play().catch(err => console.log(err));
       btn.textContent = "Pause Music";
     } else {
       audio.pause();
