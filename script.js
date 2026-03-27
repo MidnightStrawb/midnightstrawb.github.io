@@ -20,7 +20,6 @@ btn.addEventListener("click", () => {
   }
 });
 
-
 // Typing effect that wont fucking work
 const roles = [
     "Owner - Vessel Esports",
