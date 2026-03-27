@@ -7,17 +7,19 @@
 //});
 
 // AUDIOOOO
-const audio = document.getElementById("bg-music");
-const btn = document.getElementById("music-toggle");
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("bg-music");
+  const btn = document.getElementById("music-toggle");
 
-btn.addEventListener("click", () => {
-  if (audio.paused) {
-    audio.play();
-    btn.textContent = "Pause Music";
-  } else {
-    audio.pause();
-    btn.textContent = "Play Music";
-  }
+  btn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = "Pause Music";
+    } else {
+      audio.pause();
+      btn.textContent = "Play Music";
+    }
+  });
 });
 // Typing effect that wont fucking work
 const roles = [
