@@ -1,9 +1,9 @@
 #info-handle {
     position: fixed;
     top: 50%;
-    left: 0;
+    left: -6px;
     transform: translateY(-50%);
-
+    
     background: rgba(0,0,0,0.7);
     backdrop-filter: blur(10px);
 
@@ -15,8 +15,7 @@
 
     cursor: pointer;
 
-    z-index: 99999; /* 🔥 THIS FIXES CLICKING */
-
+    z-index: 99999;
     transition: 0.3s ease;
 }
 
