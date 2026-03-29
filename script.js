@@ -1,6 +1,6 @@
 // script.js
 
-const infoToggle = document.getElementById('info-toggle');
+const infoToggle = document.getElementById('info-handle');
 const infoSidebar = document.getElementById('info-sidebar');
 const closeSidebar = document.getElementById('close-sidebar');
 const sidebarOverlay = document.getElementById('sidebar-overlay');
