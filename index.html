@@ -7,40 +7,47 @@
 
     <!-- LINK TO YOUR CSS -->
     <link rel="stylesheet" href="style.css">
-</head>
-    <div class="sidebar-about">
-    <h4>About Me</h4>
-    <p>
-        I'm <strong>Midnight</strong>, a digital creator and esports visionary building the future of competitive gaming experiences. 
-    </p>
-    <p>
-        As Founder of <em>Vessel Esports</em> and Director of <em>Ping Spike</em>, I blend creative design with technical precision to build brands that resonate in the gaming world.
-    </p>
-    <p>
-        My journey started in underground LAN parties, grew into tournament organizing, and now spans web development, branding, and live event production. I thrive where tech meets culture.
-    </p>
-    <p>
-        When I'm not coding or managing teams, you’ll find me producing content, testing game mechanics, or exploring cyberpunk aesthetics in design.
-    </p>
-</div>
-
-<div class="sidebar-skills">
-    <h4>What I Do</h4>
-    <ul>
-        <li>🎮 Esports Leadership & Production</li>
-        <li>💻 Full-Stack Portfolio Development</li>
-        <li>🎨 UI/UX Design (Dark & Immersive Themes)</li>
-        <li>🔊 Audio Integration & Atmosphere Design</li>
-    </ul>
-</div>
-
-<div class="sidebar-contact">
-    <h4>Let’s Connect</h4>
-    <a href="#" target="_blank">Discord – Always On</a>
-    <a href="mailto:you@example.com">Email – Professional Inquiries</a>
-    <a href="#" target="_blank">X (Twitter) – Live Updates</a>
-</div>
 <body>
+
+<!-- TOGGLE BUTTON -->
+<button id="info-toggle" class="info-btn">☰</button>
+
+<!-- OVERLAY -->
+<div id="sidebar-overlay"></div>
+
+<!-- SIDEBAR -->
+<div id="info-sidebar">
+
+    <button id="close-sidebar">✕</button>
+
+    <div class="sidebar-section">
+        <h4>About</h4>
+        <p>
+            I build esports systems, not just teams — focused on structure, identity, and long-term growth.
+        </p>
+        <p>
+            My work blends competitive insight with design and development to create experiences that actually feel professional.
+        </p>
+    </div>
+
+    <div class="sidebar-section">
+        <h4>Focus</h4>
+        <ul>
+            <li>Esports infrastructure & org building</li>
+            <li>Web systems for teams & scheduling</li>
+            <li>Dark UI / immersive design</li>
+            <li>Creative direction & branding</li>
+        </ul>
+    </div>
+
+    <div class="sidebar-section">
+        <h4>Currently</h4>
+        <p>
+            Scaling Vessel into a structured org, building internal tools, and refining a clean competitive ecosystem.
+        </p>
+    </div>
+
+</div>
     
 <audio id="bg-music" loop>
   <source src="music.mp3" type="audio/mpeg">
