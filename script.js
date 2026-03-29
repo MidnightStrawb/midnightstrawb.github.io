@@ -1,31 +1,24 @@
 // script.js
 
-<script>
-    const infoToggle = document.getElementById('info-toggle');
-    const infoSidebar = document.getElementById('info-sidebar');
-    const closeSidebar = document.getElementById('close-sidebar');
-    const sidebarOverlay = document.getElementById('sidebar-overlay');
+const infoToggle = document.getElementById('info-toggle');
+const infoSidebar = document.getElementById('info-sidebar');
+const closeSidebar = document.getElementById('close-sidebar');
+const sidebarOverlay = document.getElementById('sidebar-overlay');
 
-    if (infoToggle) {
-        infoToggle.addEventListener('click', () => {
-            infoSidebar.classList.add('active');
-            sidebarOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-    }
+infoToggle.addEventListener('click', () => {
+    infoSidebar.classList.add('active');
+    sidebarOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
 
-    closeSidebar?.addEventListener('click', () => {
-        infoSidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    });
+closeSidebar.addEventListener('click', closeMenu);
+sidebarOverlay.addEventListener('click', closeMenu);
 
-    sidebarOverlay?.addEventListener('click', () => {
-        infoSidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-</script>
+function closeMenu() {
+    infoSidebar.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
 
 // Mouse glow
 // document.addEventListener("mousemove", (e) => {
