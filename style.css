@@ -1,3 +1,25 @@
+#info-handle {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(164, 91, 255, 0.3);
+    border-left: none;
+
+    padding: 16px 10px;
+    border-radius: 0 12px 12px 0;
+
+    cursor: pointer;
+
+    z-index: 99999; /* 🔥 THIS FIXES CLICKING */
+
+    transition: 0.3s ease;
+}
+
 #info-sidebar {
     position: fixed;
     top: 0;
