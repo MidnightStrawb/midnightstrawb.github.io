@@ -1,22 +1,15 @@
 #info-handle {
     position: fixed;
     top: 50%;
-    left: 10px;
+    left: 0;
+
     transform: translateY(-50%);
-    
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
+    z-index: 999999;
 
-    border: 1px solid rgba(164, 91, 255, 0.3);
-    border-left: none;
+    width: 40px;
+    height: 120px;
 
-    padding: 16px 10px;
-    border-radius: 0 12px 12px 0;
-
-    cursor: pointer;
-
-    z-index: 99999;
-    transition: 0.3s ease;
+    background: red; /* 👈 TEMP DEBUG */
 }
 
 #info-sidebar.active + #info-handle {
