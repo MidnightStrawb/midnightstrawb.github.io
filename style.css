@@ -20,6 +20,10 @@
     transition: 0.3s ease;
 }
 
+#info-sidebar.active + #info-handle {
+    left: 300px;
+}
+
 #info-sidebar {
     position: fixed;
     top: 0;
