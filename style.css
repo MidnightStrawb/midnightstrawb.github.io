@@ -335,7 +335,7 @@ h2 {
 
 /* HANDLE MOVES WITH SIDEBAR */
 #info-sidebar.active ~ #info-handle {
-    left: 310px;
+    left: 320px;
     box-shadow: 0 0 20px rgba(164, 91, 255, 0.6);
 }
 
