@@ -325,3 +325,21 @@ h2 {
         height: 130px;
     }
 }
+
+/* HANDLE ANIMATION */
+#info-handle {
+    transition: left 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.3s ease,
+                transform 0.2s ease;
+}
+
+/* HANDLE MOVES WITH SIDEBAR */
+#info-sidebar.active ~ #info-handle {
+    left: 300px;
+    box-shadow: 0 0 20px rgba(164, 91, 255, 0.6);
+}
+
+/* HOVER FEEL */
+#info-handle:hover {
+    transform: translateY(-50%) scaleX(1.1);
+}
