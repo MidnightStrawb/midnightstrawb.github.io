@@ -53,8 +53,7 @@
 }
 
 #info-sidebar.active {
-    left: 0;
-    transform: translateY(-50%) translateX(4px); /* 👈 nudges it forward */
+    left: 300px;
     box-shadow:
         0 0 40px rgba(164, 91, 255, 0.25),
         inset -1px 0 0 rgba(164, 91, 255, 0.2);
@@ -336,7 +335,7 @@ h2 {
 
 /* HANDLE MOVES WITH SIDEBAR */
 #info-sidebar.active ~ #info-handle {
-    left: 300px;
+    left: 310px;
     box-shadow: 0 0 20px rgba(164, 91, 255, 0.6);
 }
 
