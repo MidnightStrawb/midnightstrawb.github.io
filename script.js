@@ -1,24 +1,18 @@
-// script.js
-
-const infoToggle = document.getElementById('info-handle');
+// SIDEBAR TOGGLE (HANDLE ONLY)
+const infoHandle = document.getElementById('info-handle');
 const infoSidebar = document.getElementById('info-sidebar');
-const closeSidebar = document.getElementById('close-sidebar');
 const sidebarOverlay = document.getElementById('sidebar-overlay');
 
-infoToggle.addEventListener('click', () => {
-    infoSidebar.classList.add('active');
-    sidebarOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+infoHandle.addEventListener('click', () => {
+    infoSidebar.classList.toggle('active');
+    sidebarOverlay.classList.toggle('active');
 });
 
-closeSidebar.addEventListener('click', closeMenu);
-sidebarOverlay.addEventListener('click', closeMenu);
-
-function closeMenu() {
+// optional: clicking overlay also closes
+sidebarOverlay.addEventListener('click', () => {
     infoSidebar.classList.remove('active');
     sidebarOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-}
+});
 
 // Mouse glow
 // document.addEventListener("mousemove", (e) => {
