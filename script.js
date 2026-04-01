@@ -104,7 +104,17 @@ function formatTime(time) {
     return `${mins}:${secs}`;
 }
 
-
+// AUTOPLAY ON PAGE LOAD
+window.addEventListener("DOMContentLoaded", () => {
+    audio.play().then(() => {
+        fadeIn(audio);
+        playBtn.textContent = "❚❚";
+    }).catch(err => {
+        // Autoplay might be blocked by browser
+        console.log("Autoplay blocked:", err);
+        playBtn.textContent = "▶";
+    });
+});
 //document.addEventListener("DOMContentLoaded", () => {
 //  const audio = document.getElementById("bg-music");
 //  const btn = document.getElementById("music-toggle");
