@@ -123,20 +123,20 @@ body::before {
     padding: 40px;
 }
 
-/* Music btn */
+/* Music btn
 #music-toggle {
     position: fixed;
     bottom: 25px;
     right: 25px;
     padding: 12px 20px;
     background: rgba(0, 0, 0, 0.65);
-    border: 2px solid #ed3e41; /* Vessel red/pink */
+    border: 2px solid #ed3e41;
     color: white;
     font-size: 14px;
     font-family: 'Inter', sans-serif;
     border-radius: 10px;
     cursor: pointer;
-    z-index: 9999; /* ensures it's always clickable */
+    z-index: 9999;
     backdrop-filter: blur(6px);
     transition: 0.25s ease;
 }
@@ -145,6 +145,67 @@ body::before {
     background: rgba(237, 62, 65, 0.25);
     box-shadow: 0 0 14px #ed3e41;
     transform: translateY(-2px);
+}
+#music-player {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 260px;
+
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+
+    padding: 12px 14px;
+    color: white;
+
+    z-index: 9999;
+}
+
+/* TEXT */
+.player-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+.track-name {
+    font-weight: 600;
+}
+
+/* CONTROLS */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#play-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* PROGRESS BAR */
+.progress-container {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #a45bff, #00ffd0);
 }
 
 
