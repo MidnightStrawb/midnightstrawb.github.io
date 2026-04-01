@@ -43,7 +43,22 @@
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<button id="music-toggle">Play Music</button>
+<div id="music-player">
+    <div class="player-info">
+        <span class="track-name">Midnight</span>
+        <span class="time">
+            <span id="current-time">0:00</span> /
+            <span id="duration">1:23</span>
+        </span>
+    </div>
+    
+    <div class="controls">
+        <button id="play-btn">▶</button>
+        <div class="progress-container">
+            <div id="progress"></div>
+        </div>
+    </div>
+</div>
 
     <div class="hero">
         <div class="card">
