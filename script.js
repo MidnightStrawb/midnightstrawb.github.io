@@ -25,37 +25,75 @@ const audio = document.getElementById("bg-music");
 const playBtn = document.getElementById("play-btn");
 const progress = document.getElementById("progress");
 const progressContainer = document.querySelector(".progress-container");
-const currentTimeEl = document.getElementById("current-time");
-const durationEl = document.getElementById("duration");
+const timeEl = document.getElementById("time");
+const volumeSlider = document.getElementById("volume");
 
-audio.volume = 0.4;
+// LOAD SAVED SETTINGS
+audio.volume = localStorage.getItem("volume") || 0.4;
+audio.currentTime = localStorage.getItem("time") || 0;
+volumeSlider.value = audio.volume;
 
-// PLAY / PAUSE
+// PLAY / PAUSE WITH FADE
 playBtn.addEventListener("click", () => {
     if (audio.paused) {
         audio.play();
+        fadeIn(audio);
         playBtn.textContent = "❚❚";
     } else {
-        audio.pause();
+        fadeOut(audio);
         playBtn.textContent = "▶";
     }
 });
 
-// UPDATE PROGRESS
+// FADE FUNCTIONS
+function fadeIn(audio) {
+    audio.volume = 0;
+    let vol = 0;
+    const fade = setInterval(() => {
+        vol += 0.05;
+        if (vol >= volumeSlider.value) {
+            clearInterval(fade);
+            audio.volume = volumeSlider.value;
+        } else {
+            audio.volume = vol;
+        }
+    }, 50);
+}
+
+function fadeOut(audio) {
+    let vol = audio.volume;
+    const fade = setInterval(() => {
+        vol -= 0.05;
+        if (vol <= 0) {
+            clearInterval(fade);
+            audio.pause();
+        } else {
+            audio.volume = vol;
+        }
+    }, 50);
+}
+
+// PROGRESS UPDATE
 audio.addEventListener("timeupdate", () => {
     const percent = (audio.currentTime / audio.duration) * 100;
     progress.style.width = percent + "%";
 
-    // time formatting
-    currentTimeEl.textContent = formatTime(audio.currentTime);
-    durationEl.textContent = formatTime(audio.duration);
+    timeEl.textContent = formatTime(audio.currentTime) + " / " + formatTime(audio.duration);
+
+    localStorage.setItem("time", audio.currentTime);
 });
 
-// CLICK TO SEEK
+// SEEK
 progressContainer.addEventListener("click", (e) => {
     const width = progressContainer.clientWidth;
     const clickX = e.offsetX;
     audio.currentTime = (clickX / width) * audio.duration;
+});
+
+// VOLUME
+volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value;
+    localStorage.setItem("volume", volumeSlider.value);
 });
 
 // FORMAT TIME
@@ -65,6 +103,7 @@ function formatTime(time) {
     const secs = Math.floor(time % 60).toString().padStart(2, "0");
     return `${mins}:${secs}`;
 }
+
 
 //document.addEventListener("DOMContentLoaded", () => {
 //  const audio = document.getElementById("bg-music");
