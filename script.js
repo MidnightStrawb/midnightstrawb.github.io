@@ -140,7 +140,7 @@ const roles = [
 
 let i = 0;
 let j = 0;
-let current = "";
+let current = " ";
 let isDeleting = false;
 
 function type() {
