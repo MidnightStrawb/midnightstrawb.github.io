@@ -357,6 +357,7 @@ body::before {
     display: block;
     margin: 0 auto 25px;
     object-fit: cover;
+    object-position: center;
     border-radius: 50%;
     border: 2px solid #a45bff;
     box-shadow: 0 0 25px rgba(164, 91, 255, 0.5);
