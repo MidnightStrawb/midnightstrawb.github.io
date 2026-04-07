@@ -170,10 +170,10 @@ body::before {
     z-index: 9999;
 } */
 #music-player {
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
-    width: min(90%, 300px);
+    width: min(90vw, 300px);
     display: flex;
     gap: 12px;
 
@@ -466,6 +466,28 @@ h2 {
     .pfp {
         width: 130px;
         height: 130px;
+    }
+
+    /* 🔥 FIX MUSIC PLAYER */
+    #music-player {
+        width: calc(100vw - 20px); /* full width with margin */
+        right: 10px;
+        bottom: 10px;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .cover {
+        width: 45px;
+        height: 45px;
+    }
+
+    .top-row {
+        font-size: 11px;
+    }
+
+    .controls {
+        gap: 6px;
     }
 }
 
