@@ -470,11 +470,7 @@ h2 {
 
     /* 🔥 FIX MUSIC PLAYER */
     #music-player {
-        width: calc(100vw - 20px); /* full width with margin */
-        right: 10px;
-        bottom: 10px;
-        gap: 8px;
-        padding: 10px;
+        display: none;
     }
 
     .cover {
