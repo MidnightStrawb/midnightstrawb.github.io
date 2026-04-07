@@ -313,8 +313,6 @@ body::before {
     background: linear-gradient(90deg, #a45bff, #00ffd0);
 }
 
-
-/* ===== HERO WRAPPER ===== */
 .hero {
     width: 100%;
     display: flex;
@@ -322,7 +320,7 @@ body::before {
     padding: 40px;
 }
 
-/* ===== CARD ===== */
+/* CARD */
 .card {
     text-align: center;
     max-width: 650px;
@@ -332,8 +330,6 @@ body::before {
     border-radius: 25px;
     backdrop-filter: blur(14px);
     box-shadow: 0 0 40px rgba(120, 0, 255, 0.18);
-
-    /* Fade-in + hover motion */
     opacity: 0;
     animation: fadeIn 0.8s ease forwards;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -349,7 +345,7 @@ body::before {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== PROFILE IMAGE ===== */
+/*  pfp yippee */
 .pfp {
     width: 160px;
     height: 160px;
@@ -369,7 +365,7 @@ body::before {
     box-shadow: 0 0 30px rgba(164, 91, 255, 0.6);
 }
 
-/* ===== TEXT ===== */
+/* txt */
 h1 {
     font-size: 48px;
     letter-spacing: 2px;
@@ -386,7 +382,7 @@ h2 {
     margin: 6px 0;
 }
 
-/* ===== BUTTONS ===== */
+/* button stuffs */
 .buttons {
     margin-top: 35px;
     display: flex;
@@ -431,7 +427,7 @@ h2 {
     opacity: 0;
 }
 
-/* ===== SOCIAL ICONS ===== */
+/* icons */
 .socials {
     margin-top: 40px;
     display: flex;
@@ -453,7 +449,7 @@ h2 {
     filter: drop-shadow(0 0 12px #a45bff);
 }
 
-/* ===== MOBILE ===== */
+/* mobile compatability. kinda fucked up but whatever */
 @media (max-width: 500px) {
     .card {
         padding: 40px 25px;
@@ -500,7 +496,6 @@ h2 {
     box-shadow: 0 0 20px rgba(164, 91, 255, 0.6);
 }
 
-/* HOVER FEEL */
 #info-handle:hover {
     transform: translateY(-50%) scaleX(1.1);
 }
