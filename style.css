@@ -51,12 +51,11 @@
 
     z-index: 1002;
 }
-
 #info-sidebar.active {
     left: 0;
     box-shadow:
-        0 0 40px rgba(164, 91, 255, 0.25),
-        inset -1px 0 0 rgba(164, 91, 255, 0.2);
+        0 0 40px rgba(255, 77, 166, 0.25),
+        inset -1px 0 0 rgba(255, 77, 166, 0.2);
 }
     
 
@@ -242,7 +241,7 @@ body::before {
 #progress {
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, #a45bff, #00ffd0);
+    background: linear-gradient(90deg, #ff4da6, #ff80bf);
 }
 
 /* VOLUME */
@@ -266,7 +265,7 @@ body::before {
 
 /* HOVER GLOW */
 #music-player:hover {
-    box-shadow: 0 0 20px rgba(164, 91, 255, 0.25);
+    box-shadow: 0 0 20px rgba(255, 77, 166, 0.25);
 }
 
 /* TEXT */
@@ -310,7 +309,7 @@ body::before {
 #progress {
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, #a45bff, #00ffd0);
+    background: linear-gradient(90deg, #ff4da6, #00ffd0);
 }
 
 .hero {
@@ -329,7 +328,7 @@ body::before {
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 25px;
     backdrop-filter: blur(14px);
-    box-shadow: 0 0 40px rgba(120, 0, 255, 0.18);
+    box-shadow: 0 0 40px rgba(255, 77, 166, 0.18);
     opacity: 0;
     animation: fadeIn 0.8s ease forwards;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -337,7 +336,7 @@ body::before {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 80px rgba(164, 91, 255, 0.45);
+    box-shadow: 0 0 80px rgba(255, 77, 166, 0.45);
 }
 
 @keyframes fadeIn {
@@ -354,8 +353,8 @@ body::before {
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
-    border: 2px solid #a45bff;
-    box-shadow: 0 0 25px rgba(164, 91, 255, 0.5);
+    border: 2px solid #ff4da6;
+    box-shadow: 0 0 25px rgba(255, 77, 166, 0.5);
     margin-bottom: 25px;
     transition: 0.3s ease;
 }
@@ -370,7 +369,7 @@ h1 {
     font-size: 48px;
     letter-spacing: 2px;
     margin-bottom: 15px;
-    background: linear-gradient(90deg, #a45bff, #00ffd0);
+    background: linear-gradient(90deg, #ff4da6, #ff80bf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -393,7 +392,7 @@ h2 {
 .btn {
     padding: 14px 22px;
     border-radius: 30px;
-    border: 1px solid #a45bff;
+    border: 1px solid #ff4da6;
     color: white;
     font-weight: 600;
     text-decoration: none;
@@ -404,7 +403,7 @@ h2 {
 
 .btn:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 0 25px rgba(164, 91, 255, 0.7);
+    box-shadow: 0 0 25px rgba(255, 77, 166, 0.5);
 }
 
 /* ripple effect */
@@ -446,7 +445,7 @@ h2 {
 .icon img:hover {
     opacity: 1;
     transform: scale(1.15);
-    filter: drop-shadow(0 0 12px #a45bff);
+    filter: drop-shadow(0 0 12px #ff4da6);
 }
 
 /* mobile compatability. kinda fucked up but whatever */
@@ -493,7 +492,7 @@ h2 {
 /* HANDLE MOVES WITH SIDEBAR */
 #info-sidebar.active ~ #info-handle {
     left: 350px;
-    box-shadow: 0 0 20px rgba(164, 91, 255, 0.6);
+    box-shadow: 0 0 20px rgba(255, 77, 166, 0.6);
 }
 
 #info-handle:hover {
