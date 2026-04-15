@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top, #1a0026, #050505);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* animated background lines */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 77, 166, 0.05) 0px,
+        rgba(255, 128, 191, 0.03) 2px,
+        transparent 2px,
+        transparent 6px
+    );
+    animation: drift 18s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes drift {
+    from { transform: translateY(0); }
+    to { transform: translateY(-200px); }
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    opacity: 0.7;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* LEFT */
+.contact-info {
+    text-align: left;
+}
+
+.contact-info h2 {
+    margin-bottom: 10px;
+}
+
+/* BUTTONS */
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.discord {
+    background: #5865F2;
+}
+
+.email {
+    background: #ff4da6;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* FORM */
+.contact-form {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* INPUT GROUP */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+/* LABEL ANIMATION */
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.input-group textarea + label {
+    top: 20px;
+    transform: none;
+}
+
+/* FOCUS EFFECT */
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+    top: -8px;
+    font-size: 11px;
+    color: #ff4da6;
+}
+
+/* SUBMIT */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #ff4da6;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 0 20px #ff4da6;
+    transform: translateY(-2px);
+}
+
+/* ANIMATIONS */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.fade-in.delay {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BACK */
+.back {
+    display: inline-block;
+    margin-top: 50px;
+    color: #ff4da6;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.back:hover {
+    text-shadow: 0 0 10px #ff4da6;
+}
