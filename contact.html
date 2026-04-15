@@ -27,32 +27,76 @@
         </div>
 
         <!-- RIGHT SIDE (FORM) -->
-        <form class="contact-form fade-in delay">
+       <form class="contact-form fade-in delay" id="contactForm">
 
-            <div class="input-group">
-                <input type="text" required>
-                <label>Name</label>
-            </div>
+    <div class="input-group">
+        <input type="text" id="name" required>
+        <label>Name</label>
+    </div>
 
-            <div class="input-group">
-                <input type="email" required>
-                <label>Email</label>
-            </div>
+    <div class="input-group">
+        <input type="email" id="email" required>
+        <label>Email</label>
+    </div>
 
-            <div class="input-group">
-                <textarea rows="5" required></textarea>
-                <label>Project Details</label>
-            </div>
+    <div class="input-group">
+        <textarea rows="5" id="message" required></textarea>
+        <label>Project Details</label>
+    </div>
 
-            <button type="submit" class="submit-btn">Send Message</button>
+    <button type="submit" class="submit-btn">Send Message</button>
 
-        </form>
+</form>
+
+<p id="status"></p>
 
     </div>
 
     <a href="index.html" class="back">← Back to Portfolio</a>
 
 </div>
+<script>
+const form = document.getElementById("contactForm");
+const status = document.getElementById("status");
 
+// 🔴 PASTE YOUR WEBHOOK URL HERE
+const webhookURL = "https://discord.com/api/webhooks/1494117120601100379/X1FJHQR_h5-zmBfGxCrSwsmNzqVyh0CI1NFtPZ_gWNkHF1w5uYsXC20xhq-H8eJMDku1";
+
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const payload = {
+        content: `📩 **New Commission Request**
+        
+**Name:** ${name}
+**Email:** ${email}
+
+**Project Details:**
+${message}`
+    };
+
+    try {
+        await fetch(webhookURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+
+        status.innerText = "Message sent ✔";
+        status.style.color = "#4ade80";
+
+        form.reset();
+    } catch (err) {
+        status.innerText = "Failed to send. Try again.";
+        status.style.color = "#f87171";
+    }
+});
+</script>
 </body>
 </html>
