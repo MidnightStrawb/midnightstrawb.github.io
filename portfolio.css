@@ -198,9 +198,9 @@ body::before {
 /* meow */
 .org-link img,
 .icon img {
-    width: 10px !important;
-    height: 10px !important;
-    max-width: 10px !important;
-    max-height: 10px !important;
+    width: 16px !important;
+    height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
     object-fit: contain;
 }
