@@ -150,9 +150,16 @@ body::before {
     border: 1px solid rgba(255, 77, 166, 0.3);
 }
 
-.org-link img {
-    width: 13px;
-    height: 13px;
+.org-link img,
+.org-link .social-icon {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    object-fit: contain;
+    display: block;
 }
 
 .pill-icon {
