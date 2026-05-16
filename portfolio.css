@@ -150,25 +150,24 @@ body::before {
     border: 1px solid rgba(255, 77, 166, 0.3);
 }
 
-.org-link.icon img {
+.org-link img,
+.org-link .social-icon {
     width: 18px !important;
     height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
     max-width: 18px !important;
     max-height: 18px !important;
+    flex: 0 0 18px;
+    aspect-ratio: 1 / 1;
     object-fit: contain;
     display: block;
-    flex: 0 0 18px;
-    opacity: 0.9;
 }
 
-.org-link.icon img:hover {
+.org-link img:hover {
     opacity: 1;
 }
 
-.pill-icon {
-    font-size: 13px;
-    line-height: 1;
-}
 
 .org-link:hover {
     color: #fff;
