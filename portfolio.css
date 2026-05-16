@@ -150,19 +150,18 @@ body::before {
     border: 1px solid rgba(255, 77, 166, 0.3);
 }
 
-.org-link.icon img {
-    width: 18px !important;
-    height: 18px !important;
-    max-width: 18px !important;
-    max-height: 18px !important;
+.icon img {
+    width: 28px;
+    height: 28px;
     object-fit: contain;
-    display: block;
-    flex: 0 0 18px;
-    opacity: 0.9;
+    opacity: 0.75;
+    transition: 0.25s ease;
 }
 
-.org-link.icon img:hover {
+.icon img:hover {
     opacity: 1;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 12px #ff4da6);
 }
 
 .pill-icon {
