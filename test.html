@@ -1,81 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Commissions</title>
-    <link rel="stylesheet" href="commissions.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>OBS Overlay — MidnightStrawb</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Overlay root - fully transparent page background is enforced in CSS -->
+  <div class="overlay-root" aria-hidden="false">
 
-<div class="commission-container">
+    <!-- Centered card similar to your project layout (transparent page, visible card) -->
+    <div class="card" role="region" aria-label="Overlay card">
+      <img class="pfp" src="profile.jpg" alt="Profile" onerror="this.style.display='none'">
 
-    <h1 class="title">Website Commissions</h1>
-    <p class="subtitle">Clean. Modern. Built for esports & creators.</p>
+      <h1 class="name">MIDNIGHT</h1>
+      <h2 class="subtitle">Esports Producer</h2>
 
-    <!-- SERVICES -->
-    <h2 class="section-title">Services</h2>
-    <div class="grid">
-
-        <div class="card">
-            <h3>Portfolio Sites</h3>
-            <p>Personal websites for players, staff, and creators. Sleek, responsive, and branded.</p>
-        </div>
-
-        <div class="card">
-            <h3>Team Pages</h3>
-            <p>Roster pages, org hubs, and team showcases with stats, branding, and layouts.</p>
-        </div>
-
-        <div class="card">
-            <h3>Landing Pages</h3>
-            <p>Single-page sites for tournaments, events, or announcements.</p>
-        </div>
-
-        <div class="card">
-            <h3>Custom Projects</h3>
-            <p>Have something unique? I can build fully custom layouts and features.</p>
-        </div>
-
+      <!-- Social icons row: tcc.png placed exactly as it appears in the project (same sizing & spacing) -->
+      <div class="socials" aria-hidden="true">
+        <a class="icon" href="#" aria-label="TCC">
+          <img src="icons/tcc.png" alt="TCC">
+        </a>
+        <a class="icon" href="#" aria-label="Discord">
+          <img src="icons/icon-discord.png" alt="Discord" onerror="this.style.display='none'">
+        </a>
+        <a class="icon" href="mailto:midnight@vesselesports.org" aria-label="Email">
+          <img src="icons/mail.png" alt="Email" onerror="this.style.display='none'">
+        </a>
+        <a class="icon" href="#" aria-label="X">
+          <img src="icons/icon-x.png" alt="X" onerror="this.style.display='none'">
+        </a>
+      </div>
     </div>
 
-    <!-- PROCESS -->
-    <h2 class="section-title">Process</h2>
-    <div class="process">
+  </div>
 
-        <div class="step">
-            <span>01</span>
-            <p>Tell me what you need</p>
-        </div>
-
-        <div class="step">
-            <span>02</span>
-            <p>Design + build</p>
-        </div>
-
-        <div class="step">
-            <span>03</span>
-            <p>Revisions & polish</p>
-        </div>
-
-        <div class="step">
-            <span>04</span>
-            <p>Delivery + deploy</p>
-        </div>
-
-    </div>
-
-    <!-- CTA -->
-    <div class="cta-box">
-        <h2>Interested?</h2>
-        <p>DM me or reach out to get started.</p>
-
-        <a href="https://midnight.vesselesports.org/" class="cta-btn">Contact Me</a>
-    </div>
-
-    <a href="index.html" class="back">← Back to Portfolio</a>
-
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
