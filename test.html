@@ -1,41 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
-  <title>OBS Overlay — MidnightStrawb</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCC Overlay</title>
+
+    <link rel="stylesheet" href="tcc/tcc.css">
 </head>
 <body>
-  <!-- Overlay root: full transparent canvas for OBS -->
-  <div class="overlay-root" aria-hidden="false">
 
-    <!-- Card structure matches your project so tcc.png sits in the same spot/size as before -->
-    <div class="card" role="region" aria-label="Overlay card">
-      <img class="pfp" src="profile.jpg" alt="Profile" onerror="this.style.display='none'">
+    <img id="overlay" src="icons/tcc.png" alt="Overlay">
 
-      <h1 class="name">MIDNIGHT</h1>
-      <h2 class="subtitle">Esports Producer</h2>
-
-      <!-- Social icons row: tcc.png is included here exactly as in the project -->
-      <div class="socials" aria-hidden="true">
-        <a class="icon" href="#" aria-label="TCC">
-          <img src="icons/tcc.png" alt="TCC">
-        </a>
-        <a class="icon" href="#" aria-label="Discord">
-          <img src="icons/icon-discord.png" alt="Discord" onerror="this.style.display='none'">
-        </a>
-        <a class="icon" href="mailto:midnight@vesselesports.org" aria-label="Email">
-          <img src="icons/mail.png" alt="Email" onerror="this.style.display='none'">
-        </a>
-        <a class="icon" href="#" aria-label="X">
-          <img src="icons/icon-x.png" alt="X" onerror="this.style.display='none'">
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-  <script src="script.js"></script>
+    <script src="tcc/tcc.js"></script>
 </body>
 </html>
